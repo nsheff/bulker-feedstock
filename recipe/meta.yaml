@@ -23,6 +23,7 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
+    - setuptools
     - yacman >=0.8.4
     - pyyaml >=5.1
     - logmuse >=0.2.0
@@ -35,13 +36,11 @@ test:
   imports:
     - bulker
   requires:
-    - pip
     - mock
     - pytest
   source_files:
     - tests/
   commands:
-    - pip check
     - bulker -h >/dev/null 2>&1
     - python -m pytest
 about:
